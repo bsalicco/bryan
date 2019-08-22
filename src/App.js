@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import Home from './pages/Home';
 import NoMatch from './pages/NoMatch';
+import AppBar from './components/AppBar';
 
 function App() {
   return(
     <Router>
         <div>
+            <AppBar/>
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route component={NoMatch}/>
